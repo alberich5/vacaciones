@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.plantillaMenu')
 
     <!-- Styles -->
 @section('css')
@@ -7,16 +7,16 @@
 
 
 @section('content')
-<div  class="container">
+<div  class="container" id="menu">
     <div id="seleccionMD" class="row">
         <div class="col-md-12">
-           
+
                     <!-- menu Grid Section -->
    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Areas</h2>
+                    <h2 id="areas">Areas</h2>
                     <hr class="star-primary">
 <a href="#" class="btm btn-warning btn-sm" v-on:click.prevent="editSucursal()">Editar</a>
 

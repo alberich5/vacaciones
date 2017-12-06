@@ -9,17 +9,14 @@
 
 @section('content')
 <!-- Inicio del body del panel -->
-            <div class="row" >
-              <br>
 
-            </div>
             <div class="row" >
-              
 
-                  <div class="panel panel-default col-sm-10 col-sm-offset-1">
+
+                  <div class="panel panel-default col-sm-10 col-sm-offset-1" id="contenedorUsuario">
                   <!--      inicio Wizard container        -->
-                  <div class="panel-heading"> <h3 align="center">ELEMENTOS</h3></div>
-            
+                  <div class="panel-heading" id="titulo"> <h3 align="center" >ELEMENTOS</h3></div>
+
             </br>
             </br>
 
@@ -28,12 +25,12 @@
                       <div name="formulario busqueda" class="form-horizontal">
 
                         <div class="row">
-                         
+
                             <div class=" col-sm-6 form-group">
 
                                 <div class="input-group col-md-8 col-md-offset-1">
                                     <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">account_circle</i>   
+                                      <i class="material-icons md-18">account_circle</i>
                                     </span>
 
                                     <input id="id" type="id" class="form-control" name="id"  autofocus placeholder="ID" aria-describedby="basic-addon1"  v-model="searchUsuario.id">
@@ -43,12 +40,12 @@
                         </div>
 
                         <div class="row">
-                         
+
                             <div class=" col-sm-6  form-group ">
 
                                 <div class=" input-group col-md-8 col-md-offset-1">
                                     <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">person</i>   
+                                      <i class="material-icons md-18">person</i>
                                     </span>
 
                                     <input id="rfc" type="rfc" class="form-control" name="rfc" value=""  autofocus placeholder="RFC" aria-describedby="basic-addon1" style="text-transform:uppercase;" v-model="searchUsuario.rfc" >
@@ -58,12 +55,12 @@
                         </div>
 
                         <div class="row">
-                         
+
                             <div class=" col-sm-6  form-group ">
 
                                 <div class=" input-group col-md-8 col-md-offset-1">
                                     <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">person</i>   
+                                      <i class="material-icons md-18">person</i>
                                     </span>
 
                                     <input id="nombre" type="nombre" class="form-control" name="nombre" value=""  autofocus placeholder="Nombre" aria-describedby="basic-addon1" style="text-transform:uppercase;" v-model="searchUsuario.nombre" >
@@ -74,12 +71,12 @@
 
 
                         <div class="row">
-                         
+
                             <div class=" col-sm-6  form-group ">
 
                                 <div class=" input-group col-md-8 col-md-offset-1">
                                     <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">&nbsp; &nbsp;&nbsp;</i>   
+                                      <i class="material-icons md-18">&nbsp; &nbsp;&nbsp;</i>
                                     </span>
 
                                     <input id="paterno" type="paterno" class="form-control" name="paterno" value=""  autofocus placeholder="Apellido paterno" aria-describedby="basic-addon1" style="text-transform:uppercase;"  v-model="searchUsuario.paterno">
@@ -90,12 +87,12 @@
 
 
                         <div class="row">
-                         
+
                             <div class=" col-sm-6 form-group ">
 
                                 <div class=" input-group col-md-8 col-md-offset-1">
                                     <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">&nbsp; &nbsp;&nbsp;</i>   
+                                      <i class="material-icons md-18">&nbsp; &nbsp;&nbsp;</i>
                                     </span>
 
                                     <input id="materno" type="materno" class="form-control" name="materno" value=""  autofocus placeholder="Apellido materno" aria-describedby="basic-addon1" style="text-transform:uppercase;"  v-model="searchUsuario.materno" >
@@ -104,19 +101,19 @@
                             </div>
                         </div>
 
-                      
 
 
 
-                          
-                       
-                         
+
+
+
+
                         <div class="row col-sm-offset-1">
-                                
+
 
                                 <input type="submit" class="btn btn-primary" value="BUSCAR">
-                                
-               
+
+
                         </div>
                        </div><!--      FORM BUSQ      -->
                       </form>
@@ -125,7 +122,7 @@
 
 
                       <!--      tabla usuarios      -->
-                      
+
 
                       Buscar : <input v-model="search">
                       <hr>
@@ -142,7 +139,7 @@
                     @include('administrador.usuario.historial')
                     @include('administrador.usuario.show')
 </div>
-                      
+
 
 
 
@@ -153,15 +150,15 @@
 
 
 
-                   
-                  
-               
+
+
+
               </div>
           </div> <!-- row -->
 
 
  <!-- pruebas -->
-         
+
 <!-- fin de pruebas -->
 
 
@@ -180,7 +177,7 @@
 
 <script src="{{ asset('loopj-jquery-tokeninput/src/jquery.tokeninput.js') }}"></script>
 <script type="text/javascript">
-  
+
     /*
 $("#demo-input").tokenInput([
                           {id: 7, name: "Ruby"},
@@ -217,7 +214,7 @@ $("#demo-input").tokenInput([
 
 function editar(id)
 {
-  
+
   $('#edit').modal('show');
   document.getElementById('id_usuario_edit').value=id;
  document.getElementById("id_usuario_edit").click();
@@ -228,7 +225,7 @@ function editar(id)
 
 function ver(id)
 {
-  
+
   $('#show').modal('show');
   document.getElementById('id_usuario_show').value=id;
  document.getElementById("id_usuario_show").click();
@@ -238,7 +235,7 @@ function ver(id)
 
 function historial(id)
 {
-  
+
   $('#historial').modal('show');
   document.getElementById('id_usuario_historial').value=id;
   document.getElementById("id_usuario_historial").click();
@@ -260,7 +257,7 @@ Vue.component('data-table', {
         { title: 'APELLIDO PATERNO' },
         { title: 'APELLIDO MATERNO'  },
         { title: 'SUCURSAL' , class: 'some-special-class sorting' }
-    
+
       ],
       rows: [] ,
       dtHandle: null
@@ -290,7 +287,7 @@ Vue.component('data-table', {
         row.push(item.apellido_paterno);
         row.push(item.apellido_materno);
         row.push(item.sub_delegacion);
-       
+
         vm.rows.push(row);
       });
 
@@ -300,8 +297,8 @@ Vue.component('data-table', {
       vm.dtHandle.rows.add(vm.rows);
       vm.dtHandle.draw();
     }
- 
-  
+
+
 
 
 
@@ -309,7 +306,7 @@ Vue.component('data-table', {
   },
   methods:{
 
-                    
+
               }
 
   ,
@@ -331,7 +328,7 @@ Vue.component('data-table', {
                 first:    'Inicio',
                 previous: 'Anterior',
                 next:     'Siguiente',
-                last:     'Ultimo'       
+                last:     'Ultimo'
         },
 
         emptyTable: "Sin resultados",
@@ -347,8 +344,8 @@ Vue.component('data-table', {
        infoEmpty: "",
        infoFiltered: " - filtered from _MAX_ records"
 
-     
-    
+
+
 
     }
 
@@ -358,7 +355,7 @@ Vue.component('data-table', {
 
 
 
-  } 
+  }
 
 
 
@@ -373,7 +370,7 @@ new Vue({
     searchUsuario:{id:'',rfc:'',nombre:'',paterno:'',materno:''},
     users: [],
     search: '',
-    
+
     usuario:{},
     idElemento:'',
     permisos:[],
@@ -389,7 +386,7 @@ new Vue({
 
 
 
-    
+
     fechaTerminoVacaciones:'',
 fechaReincorporacionVacaciones:'',
 idPermisoImprimir:''
@@ -398,46 +395,46 @@ idPermisoImprimir:''
 
 
   },
-  methods:{     
+  methods:{
     calcularFechaTR:function(){
-     
+
 
      var url='/administrador/usuario/calcularfecha';
-                    
+
                     axios.post(url,{
-                        fechaInicioVacaciones:this.fechaInicioVacaciones,//new keep es e input 
+                        fechaInicioVacaciones:this.fechaInicioVacaciones,//new keep es e input
                         diasVacaciones:this.diasVacaciones
                     }).then(response=>{
                     // alert(response.data);
                     this.fechaTerminoVacaciones =response.data.fechaTerminoVacaciones;
-                    
+
                     this.fechaReincorporacionVacaciones =response.data.fechaReincorporacionVacaciones;
-                  
+
 
                       this.errors=[];//listado de errores
                       //alert(response.data);
-                    
+
                     }).catch(error=>{
                       this.errors=error.response.data
 
                     });
-    }   
+    }
      ,
-     
+
                     descargarArchivo:function(id_permiso){
-     
+
 
                     window.open('usuario/vacaciones/download/'+id_permiso,"_self");
-                   }   
+                   }
 
 
      ,
                     createUsuario:function()
                     {
-                      
+
 
                       var url='/administrador/usuario/create';
-                    
+
                     axios.post(url,{
 
 
@@ -449,9 +446,9 @@ idPermisoImprimir:''
                       fechaTerminoVacaciones:this.fechaTerminoVacaciones,
                       fechaReincorporacionVacaciones:this.fechaReincorporacionVacaciones
 
-                      
+
                     }).then(response=>{
-                      
+
 
                        $('#edit').modal('toggle');
                       this.errors=[];//listado de errores
@@ -463,7 +460,7 @@ idPermisoImprimir:''
                       this.fechaTerminoVacaciones='';
                       this.fechaReincorporacionVacaciones='';
                       //alert(response.data);
-                      
+
                       this.idPermisoImprimir=response.data;
                      this.descargarArchivo(response.data);
                     //fin descarga
@@ -473,10 +470,10 @@ idPermisoImprimir:''
                     });
 
 
-                    
+
                     //this.idPermisoImprimir=0;
                     },
-                    
+
 
 
 
@@ -486,18 +483,18 @@ idPermisoImprimir:''
 
 
                     var url='/administrador/usuario/edit';
-                     
+
                     axios.post(url,{
-                        usuario:this.idElemento//new keep es e input 
+                        usuario:this.idElemento//new keep es e input
                     }).then(response=>{
-                     
+
                      this.editUsuario=response.data.usuario;
                      this.editUsuario=this.editUsuario[0];
                      //this.editUsuario.diasSeleccionados='';
-                     //<input type="text" id="permisosEditar">  
+                     //<input type="text" id="permisosEditar">
                      //padre
 
-                     
+
                      var selectDias = document.getElementById("dias");
 
                      for (var ii =0;ii<= selectDias.length  ; ii++) {
@@ -512,13 +509,13 @@ idPermisoImprimir:''
                       selectDias.options.add(c, i);
 
                      }
-                     
 
-                  
+
+
 
                       this.errors=[];//listado de errores
                       //alert(response.data);
-                    
+
                     }).catch(error=>{
                       this.errors=error.response.data
 
@@ -533,17 +530,17 @@ idPermisoImprimir:''
                     {
                     this.idElemento=document.getElementById('id_usuario_show').value;
                     var url='/administrador/usuario/show';
-                     
+
                     axios.post(url,{
-                        usuario:this.idElemento//new keep es e input 
+                        usuario:this.idElemento//new keep es e input
                     }).then(response=>{
-                      
+
                      //this.permisos=response.data;
-                     
-                     
+
+
                       this.errors=[];//listado de errores
                       //alert(response.data);
-                    
+
                     }).catch(error=>{
                       this.errors=error.response.data
 
@@ -551,40 +548,40 @@ idPermisoImprimir:''
 
 
                     },
-                  
+
                     historialUsuario:function()
                     {
 
                     this.idElemento=document.getElementById('id_usuario_historial').value;
                     var url='/administrador/usuario/historial';
-                     
+
                     axios.post(url,{
-                        usuario:this.idElemento//new keep es e input 
+                        usuario:this.idElemento//new keep es e input
                     }).then(response=>{
-                      
+
 
 
                      this.accesos=response.data;
-                     
-                     
+
+
                       this.errors=[];//listado de errores
                       //alert(response.data);
-                    
+
                     }).catch(error=>{
                       this.errors=error.response.data
 
                     });
 
-                     
+
 
                 },
                     busquedaUsuario:function()
                     {
                     this.users=[];
                     var url='/administrador/usuario/search';
-                   
+
                     axios.post(url,{
-                        usuario:this.searchUsuario//new keep es e input 
+                        usuario:this.searchUsuario//new keep es e input
                     }).then(response=>{
                     //  alert(response.data.nombre);
                      // this.usuarios=[];
@@ -602,8 +599,8 @@ idPermisoImprimir:''
                       this.searchUsuario.nombre='';
                       this.searchUsuario.paterno='';
                       this.searchUsuario.materno='';
-                        toastr.success('Busqueda exitosa');//mensaje 
-                        
+                        toastr.success('Busqueda exitosa');//mensaje
+
 
                         //
                        ///
@@ -612,7 +609,7 @@ idPermisoImprimir:''
 
                     });
 
-                     
+
 
                 },
 
@@ -632,26 +629,26 @@ idPermisoImprimir:''
           user.nombre.toLowerCase().indexOf(search) !== -1 ||
           user.apellido_paterno.toLowerCase().indexOf(search) !== -1 ||
           user.apellido_materno.toLowerCase().indexOf(search) !== -1 ||
-          user.sub_delegacion.toLowerCase().indexOf(search) !== -1 
+          user.sub_delegacion.toLowerCase().indexOf(search) !== -1
 
-          
+
       })
     }
-   
 
 
-   
+
+
 
   },
   mounted() {
     let vm = this;
-   
-    
+
+
         vm.users = [];
 
 
-   
-      
+
+
 
   }
 });

@@ -1,0 +1,50 @@
+#cabecera{
+  background-color: #03134e !important;
+  color: white !important;
+
+}
+
+#menu{
+  background-color: white !important;
+  width: 80%;
+  height: 500px;
+  margin-top: 2%;
+    box-shadow: 0px 2px 19px 5px rgba(184,151,184,0.70);
+  border-radius: 28px 28px 28px 28px;
+}
+
+/*parte de la plantilla de admisnistrador*/
+#body{
+
+  background-image: url('pabic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#recurso{
+  text-align: center;
+  color: white;
+  margin-left: -3%;
+  margin-top: 15%;
+  box-shadow: 0px 2px 64px -11px rgba(237,239,245,1);
+  border-radius: 20px 20px 20px 20px;
+  width: 36%;
+  transition-duration: 3s, 5s;
+}
+#recurso:hover{
+  background-color: #edeff5;
+  color: #022358;
+}
+#contenedorUsuario{
+  margin-top: 2%;
+
+  box-shadow: 0px 2px 19px 5px rgba(184,151,184,0.75);
+}
+#titulo{
+  background-color: #022358;
+  border-radius: 0px 0px 25px 25px;
+  /*box-shadow: 0px 6px 21px 1px rgba(2,35,88,1);*/
+}
+#areas{
+  color: #03134e !important;
+}

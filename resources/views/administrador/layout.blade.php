@@ -12,14 +12,15 @@
 
     <!-- Styles -->
  <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
-    
-   
+ <link href="{{asset('css/admin.css')}}" rel="stylesheet" type="text/css">
+
+
      @yield('css')
 
    </head>
-<body>
+<body id="body">
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" id="cabecera">
             <div class="container">
                 <div class="navbar-header">
 
@@ -47,7 +48,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{{ route('administrador.usuario.index') }}">Listar</a></li>
-                                    
+
                                 </ul>
                                </li>
                     </ul>
@@ -90,7 +91,7 @@
         </div>
 
 
-        
+
     </div>
 
     <!-- Scripts -->

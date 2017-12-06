@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+      <link href="{{asset('css/login.css')}}" rel="stylesheet" type="text/css">
     @yield('css')
 
 
@@ -21,9 +22,9 @@
    </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" id="cabecera">
             <div class="container">
-                <div class="navbar-header">
+                <div class="navbar-header" >
 
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -51,8 +52,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Iniciar sesion</a></li>
-                            <li><a href="{{ route('register') }}">Registrar</a></li>
+                          
+
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

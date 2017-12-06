@@ -12849,23 +12849,29 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
+
+/*color de las letras de cabecera login*/
+
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #f9e6e6;
+
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #debde4;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
   color: #777;
 }
+
+/*colores de la liga*/
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #f9e6e6;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #debde4;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -15141,7 +15147,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #333;
+    color: #edeff5;
 }
 
 h1 {
